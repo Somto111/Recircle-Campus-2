@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+}
+img{
+    width: 500px;
+}
+span{
+    color: rgb(132, 185, 16);
+}
+header{
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.3 ease;
+    background: transparent;
+    z-index: 50;
+}
+.header.scrolled{
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header.scrolled .headtext{
+    color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+}
+.headtext{
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    border-radius: 50px;
+
+}
+.headtext img{
+    width: 40px;
+}
+.navlinks{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    border-radius: 50px;
+}
+.links{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+.links:hover{
+    font-style: italic;
+    color: rgb(132, 185, 16);
+}
+.sectionimg{
+    width: 400px;
+}
+.logo{
+    width: 40px;
+}
+.about{
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    background-color: beige;
+
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 10rem;
+}
+.divtext{
+    font-size: 1.5rem;
+}
+.h1text{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: rgb(132, 185, 16);
+}
+.divtext p{
+    line-height: 40px;
+}
+.container{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slineIn 1.2s ease-out backwards;
+}
+.cardcontainer{
+    display: flex;
+    gap: 1.5rem;
+}
+.card{
+    background-color: whitesmoke;
+    width: 400px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    transform: scale(0.9);
+}
+.card img{
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 3rem;
+}
+.card h2{
+    color: rgb(132, 185, 16);
+}
+.card p{
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+.hero{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    color: white;
+    text-align: left;
+    background: url("/images/full-shot-friends-with-skateboard.jpg") no-repeat center center/cover;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0.9) 5%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+.hero-content{
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    animation: slideIn 1.2s ease-out forwards;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: cursive;
+}
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+footer{
+    background-color: rgb(52, 52, 52);
+    padding: 1.5rem;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logotext{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.45rem;
+}
+.logotext img{
+    margin-right: 0.2rem;
+}
+.foot p{
+    margin-bottom: 1.1rem;
+    font-size: 1.1rem;
+}
+.footerlink{
+    list-style: none;
+    line-height: 30px;
+}
+.footerlink li{
+    text-decoration: none;
+
+}
+.footer-btn p{
+        margin-bottom: 0.8rem;
+}
+.footer-btn input{
+    border: none;
+    padding: 0.45rem;
+    border-radius: 3px;
+}
+.footer-btn button{
+    background-color:rgb(132, 185, 16);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.footer-btn button:hover{
+    transform: scale(0.9)
+}
+.bookcall{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bookcall button{
+    background-color:rgb(132, 185, 16);
+    border: none;
+    padding:0.5rem  1.5rem;
+    border-radius: 3px;
+    color: white;
+    transition: 0.5s ease-in-out;
+    margin-top: 0.8rem;
+}
+.bookcall button:hover{
+    transform: scale(0.9)
+}
+.waitlist{
+    margin-top: 1.5rem;
+}
+.waitlist input{
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: none;
+    width: 23em;
+
+}
+.waitlist button{
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    background-color:  rgb(132, 185, 16);
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.waitlist button:hover{
+    transform: scale(0.9);
+}
+@media (min-width: 200px) and (max-width:768px){
+    .cont{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    .divtext{
+        text-align: start;
+        font-size: 1rem;
+    }
+    .h1text{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .cardcontainer{
+        flex-direction: column;
+    }
+    .container{
+        padding: 0;
+    }
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-btn{
+        margin-top: 2rem;
+    }
+    .footer-btn p{
+        margin-bottom: 0.8rem;
+    }
+    .foot p{
+        margin-bottom: 0.7rem;
+    }
+    .foot{
+        margin-top: 2rem;
+    }
+    .logotext{
+        margin-bottom: 1.1rem;
+    }
+    .waitlist button{
+        margin-top: 0.8rem;
+    }
+}
+@media (max-width: 1024px){
+    .cont{
+        gap: 0.5rem;
+    }
+    .divtext{
+        font-size: 1rem;
+    }
+    .h1text{
+        font-size: 2rem;
+    }
+    .footer{
+
+    }
+}
