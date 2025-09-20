@@ -6,7 +6,8 @@ body{
     font-family: "Quicksand", sans-serif;
 }
 img{
-    width: 500px;
+    display: block;
+    width: 100%;
 }
 span{
     color: rgb(132, 185, 16);
@@ -21,6 +22,7 @@ header{
     transition: all 0.3 ease;
     background: transparent;
     z-index: 50;
+    border: 1px solid black;
 }
 .header.scrolled{
     background: rgba(255, 255, 255, 0.9);
@@ -36,6 +38,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     background: transparent;
+    border: 1px solid black;
 }
 .headtext{
     display: flex;
@@ -47,6 +50,7 @@ nav{
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 0.5rem;
     border-radius: 50px;
+    
 
 }
 .headtext img{
@@ -74,7 +78,9 @@ nav{
     color: rgb(132, 185, 16);
 }
 .sectionimg{
-    width: 400px;
+    /* width: 400px; */
+    max-width: 100%;
+    height: auto;
 }
 .logo{
     width: 40px;
@@ -84,22 +90,33 @@ nav{
     display: flex;
     width: 100%;
     background-color: beige;
+    border: 1px solid black;
 
 }
 .cont{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    gap: 10rem;
+    /* gap: 10rem; */
+    gap: 2rem;
+    border: 1px solid black;
+    /* width: 95%; */
+    width: 100%;
 }
-.divtext{
+.divtext, figure{
+    flex: 1 1 300px;
+    max-width: 500px;
     font-size: 1.5rem;
+    border: 1px solid black;
+    /* width: 45%; */
 }
 .h1text{
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: rgb(132, 185, 16);
+    border: 1px solid black;
 }
 .divtext p{
     line-height: 40px;
@@ -111,17 +128,23 @@ nav{
     justify-content: center;
     align-items: center;
     animation: slineIn 1.2s ease-out backwards;
+    border: 1px solid black;
 }
 .cardcontainer{
     display: flex;
     gap: 1.5rem;
+    border: 1px solid black;
 }
 .card{
     background-color: whitesmoke;
-    width: 400px;
+    /* width: 400px; */
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
     border-radius: 5px;
     text-align: center;
     transition: 0.5s ease-in-out;
+    border: 1px solid black;
 }
 .card:hover{
     transform: scale(0.9);
@@ -130,6 +153,7 @@ nav{
     width: 100%;
     border-radius: 5px 5px 0px 0px;
     margin-bottom: 3rem;
+    border: 1px solid black;
 }
 .card h2{
     color: rgb(132, 185, 16);
@@ -149,6 +173,7 @@ nav{
     color: white;
     text-align: left;
     background: url("/images/full-shot-friends-with-skateboard.jpg") no-repeat center center/cover;
+    border: 1px solid black;
 }
 .hero::before{
     content: "";
@@ -199,6 +224,7 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid black;
 }
 .logotext{
     display: flex;
@@ -262,10 +288,13 @@ footer{
     margin-top: 1.5rem;
 }
 .waitlist input{
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
     padding: 0.5rem;
     border-radius: 50px;
     border: none;
-    width: 23em;
+    /* width: 23em; */
 
 }
 .waitlist button{
@@ -279,14 +308,18 @@ footer{
 .waitlist button:hover{
     transform: scale(0.9);
 }
-@media (min-width: 200px) and (max-width:768px){
+/* @media (min-width: 320px) and (max-width:768px){
     .cont{
         flex-direction: column-reverse;
         gap: 2rem;
     }
     .divtext{
         text-align: start;
-        font-size: 1rem;
+        font-size: 0.5rem;
+        width: 80%;
+    }
+    .divtext p{
+        font-size: 0.5rem;
     }
     .h1text{
         text-align: center;
@@ -321,6 +354,7 @@ footer{
         margin-top: 0.8rem;
     }
 }
+
 @media (max-width: 1024px){
     .cont{
         gap: 0.5rem;
@@ -334,4 +368,61 @@ footer{
     .footer{
 
     }
+} */
+
+/* @media (max-width: 650px){
+    .cont{
+        flex-direction: column-reverse;
+    }
+    .cardcontainer{
+        flex-direction: column;
+    }
+} */
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 650px) {
+  .cont {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .divtext, figure {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .cardcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .waitlist input {
+    width: 100%;
+    max-width: 280px;
+  }
 }
