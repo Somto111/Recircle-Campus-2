@@ -22,7 +22,6 @@ header{
     transition: all 0.3 ease;
     background: transparent;
     z-index: 50;
-    border: 1px solid black;
 }
 .header.scrolled{
     background: rgba(255, 255, 255, 0.9);
@@ -38,7 +37,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    border: 1px solid black;
 }
 .headtext{
     display: flex;
@@ -90,7 +88,6 @@ nav{
     display: flex;
     width: 100%;
     background-color: beige;
-    border: 1px solid black;
 
 }
 .cont{
@@ -101,7 +98,6 @@ nav{
     padding: 1rem;
     /* gap: 10rem; */
     gap: 2rem;
-    border: 1px solid black;
     /* width: 95%; */
     width: 100%;
 }
@@ -109,14 +105,12 @@ nav{
     flex: 1 1 300px;
     max-width: 500px;
     font-size: 1.5rem;
-    border: 1px solid black;
     /* width: 45%; */
 }
 .h1text{
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: rgb(132, 185, 16);
-    border: 1px solid black;
 }
 .divtext p{
     line-height: 40px;
@@ -128,12 +122,10 @@ nav{
     justify-content: center;
     align-items: center;
     animation: slineIn 1.2s ease-out backwards;
-    border: 1px solid black;
 }
 .cardcontainer{
     display: flex;
     gap: 1.5rem;
-    border: 1px solid black;
 }
 .card{
     background-color: whitesmoke;
@@ -144,7 +136,6 @@ nav{
     border-radius: 5px;
     text-align: center;
     transition: 0.5s ease-in-out;
-    border: 1px solid black;
 }
 .card:hover{
     transform: scale(0.9);
@@ -153,7 +144,6 @@ nav{
     width: 100%;
     border-radius: 5px 5px 0px 0px;
     margin-bottom: 3rem;
-    border: 1px solid black;
 }
 .card h2{
     color: rgb(132, 185, 16);
@@ -173,7 +163,6 @@ nav{
     color: white;
     text-align: left;
     background: url("/images/full-shot-friends-with-skateboard.jpg") no-repeat center center/cover;
-    border: 1px solid black;
 }
 .hero::before{
     content: "";
@@ -224,7 +213,6 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
 }
 .logotext{
     display: flex;
